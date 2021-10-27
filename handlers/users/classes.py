@@ -80,4 +80,4 @@ async def answer_text(message: types.Message):
 
 @dp.message_handler(IsPrivate, text = 'bugungi')
 async def answer_text(message: types.Message):
-    await message.answer(now)
+    await message.answer(day)
