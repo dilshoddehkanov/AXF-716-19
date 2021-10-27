@@ -4,6 +4,6 @@ from loader import dp
 from filters.chat_filters import IsPrivate
 
 # Echo bot
-@dp.message_handler(IsPrivate, state=None)
+@dp.message_handler(IsPrivate(), state=None)
 async def bot_echo(message: types.Message):
     await message.answer(message.text)

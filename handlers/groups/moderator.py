@@ -6,11 +6,7 @@ import aiogram
 from aiogram import types
 from aiogram.dispatcher.filters import Command
 from aiogram.utils.exceptions import BadRequest
-from loguru import logger
 
-from data.permissions import (set_new_user_approved_permissions,
-                              set_no_media_permissions,
-                              set_user_ro_permissions)
 from filters import IsGroup, AdminFilter
 from loader import bot, dp
 
