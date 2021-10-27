@@ -1,4 +1,6 @@
 from aiogram import types
+
+from filters import IsPrivate
 from loader import dp
 import random
 
@@ -75,3 +77,7 @@ async def answer_text(message: types.Message):
     result = word1[user_message]
     if result:
         await message.answer("<i>"+result+"</i>" + random.choices(sticer)[0])
+
+@dp.message_handler(IsPrivate, text = 'bugungi')
+async def answer_text(message: types.Message):
+    await message.answer(now)
