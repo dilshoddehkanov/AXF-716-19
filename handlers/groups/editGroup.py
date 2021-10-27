@@ -35,7 +35,7 @@ async def set_new_description(message: types.Message):
     # 2-usul
     await message.chat.set_description(description=description)
 
-@dp.message_handler(IsGroup(), Text(contains='Elon', ignore_case=True), AdminFilter())
+@dp.message_handler(IsGroup(), Text(contains='Diqqat', ignore_case=True), AdminFilter())
 async def set_new_description(message: types.Message):
     await message.reply('@Web_developper_D @Xatamov0420 @Akbar_TUIT @Ibrohim_Erkinov '
                         '@Farrux1999A @Shaxboz_Adizov @dvaliyev @ava_099 @Javlon2050 '
