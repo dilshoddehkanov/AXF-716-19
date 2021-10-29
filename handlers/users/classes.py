@@ -61,12 +61,12 @@ async def dars_jadval(message: types.Message):
                              '\nMazzami slaga aa mazzami?😂😂😂')
 
     weekday_name = now.strftime('%A')
-    weekday = hafta[barchasi2[int(now.strftime('%w'))]]
+    weekday = hafta[barchasi2[int(now.strftime('%w'))+1]]
     await message.answer(f"<b><i>Bugun: {weekday}</i></b>\n\n" + barchasi[weekday_name])
 
 @dp.message_handler(commands='erta')
 async def dars_jadval(message: types.Message):
-    weekday = int(now.strftime('%w')) + 1
+    weekday = int(now.strftime('%w')) + 2
     if weekday == 7 or weekday == 3:
         kun = f"<b><i>Ertaga: {hafta[barchasi2[weekday]]}</i></b>\n\n" + "Ertaga dam olish kuni!"
     await message.answer(f"<b><i>Ertaga: {hafta[barchasi2[weekday]]}</i></b>\n\n" + barchasi[barchasi2[weekday]])
